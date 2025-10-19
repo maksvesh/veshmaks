@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Успех - Свежие продукты с доставкой</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Успех</span>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#categories" class="nav-link">Категории</a></li>
+                <li><a href="#products" class="nav-link">Товары</a></li>
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="search-cart">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </div>
+            </div>
+            
+            <div class="auth-buttons" id="authButtons">
+                <a href="login.html" class="auth-btn">Вход</a>
+                <a href="register.html" class="auth-btn primary">Регистрация</a>
+            </div>
+            
+            <div class="user-menu" id="userMenu">
+                <a href="profile.html" class="user-avatar" id="userAvatar">ИИ</a>
+                <span id="userName">Иван Иванов</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Свежие продукты с доставкой за 2 часа</h1>
+            <p>Более 5000 товаров от проверенных поставщиков с гарантией качества. Фермерские продукты, органические
+                овощи и фрукты, свежее мясо и молочная продукция.</p>
+            <a href="#products" class="cta-button">Сделать заказ</a>
+            <div style="margin-top: 2rem;">
+                <a href="login.html" class="auth-btn" style="background: white; color: var(--primary); margin: 0.5rem;">Войти в аккаунт</a>
+                <a href="register.html" class="auth-btn primary" style="margin: 0.5rem;">Создать аккаунт</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Категории товаров -->
+    <section id="categories" class="categories">
+        <h2 class="section-title">Категории товаров</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-img">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Овощи и Фрукты</h3>
+                    <p>Свежие фермерские овощи и сезонные фрукты. Органическое выращивание без химикатов.</p>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img">
+                    <i class="fas fa-wine-bottle"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Молочные продукты</h3>
+                    <p>Натуральное молоко, творог, сыры и йогурты от местных производителей.</p>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Мясо и Птица</h3>
+                    <p>Свежее мясо, курица, индейка и деликатесы. Контроль качества на всех этапах.</p>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img">
+                    <i class="fas fa-bread-slice"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Бакалея</h3>
+                    <p>Крупы, макароны, масла, специи и все необходимое для приготовления пищи.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные товары -->
+    <section id="products" class="products">
+        <h2 class="section-title">Популярные товары</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Яблоки Гренни Смит</h3>
+                    <p class="product-description">Свежие кисло-сладкие яблоки из Краснодарского края. Идеальны для
+                        выпечки и свежего употребления.</p>
+                    <div class="product-price">150 ₽/кг</div>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-wine-bottle"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Молоко Простоквашино</h3>
+                    <p class="product-description">Натуральное пастеризованное молоко 3.2% жирности. Упаковка 1 литр.
+                    </p>
+                    <div class="product-price">85 ₽</div>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Куриное филе</h3>
+                    <p class="product-description">Свежее охлажденное куриное филе без кожи. Отборное мясо от
+                        проверенных поставщиков.</p>
+                    <div class="product-price">320 ₽/кг</div>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-bread-slice"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Хлеб Бородинский</h3>
+                    <p class="product-description">Натуральный ржаной хлеб по традиционному рецепту. Вес 500 грамм.</p>
+                    <div class="product-price">45 ₽</div>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <h2 class="section-title">О нашем магазине</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Успех - качество, которому доверяют</h2>
+                <p>Мы работаем на рынке с 2015 года и за это время заслужили доверие тысяч покупателей. Наша миссия -
+                    сделать покупку продуктов удобной, быстрой и приятной.</p>
+                <p>Мы сотрудничаем напрямую с фермерскими хозяйствами и проверенными производителями, чтобы
+                    гарантировать свежесть и качество каждого товара.</p>
+
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h4>Быстрая доставка</h4>
+                        <p>Доставляем за 2 часа в удобное для вас время</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <h4>Гарантия качества</h4>
+                        <p>Все товары проходят строгий контроль</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Эко-продукты</h4>
+                        <p>Широкий выбор органических продуктов</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <h4>Поддержка 24/7</h4>
+                        <p>Всегда готовы помочь с выбором</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h4>50,000+</h4>
+                    <p>Довольных клиентов</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-store"></i>
+                    <h4>5,000+</h4>
+                    <p>Товаров в каталоге</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <h4>15,000+</h4>
+                    <p>Доставок в месяц</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="contacts">
+        <h2 class="section-title">Наши контакты</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-text">
+                        <h3>Телефон</h3>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>+7 (800) 123-45-67 (бесплатно)</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>info@uspekh.ru</p>
+                        <p>support@uspekh.ru</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-text">
+                        <h3>Адрес</h3>
+                        <p>Москва, ул. Примерная, 15</p>
+                        <p>Ежедневно с 8:00 до 23:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-text">
+                        <h3>Время работы</h3>
+                        <p>Пн-Вс: 8:00 - 23:00</p>
+                        <p>Доставка: круглосуточно</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3>Мы на карте</h3>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Карта расположения магазина</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>Успех - это современный онлайн-супер с быстрой доставкой свежих продуктов прямо к вашей
+                    двери.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Категории</h3>
+                <a href="#categories">Овощи и фрукты</a>
+                <a href="#categories">Молочные продукты</a>
+                <a href="#categories">Мясо и птица</a>
+                <a href="#categories">Бакалея</a>
+                <a href="#categories">Напитки</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Полезные ссылки</h3>
+                <a href="#about">О компании</a>
+                <a href="#contacts">Доставка и оплата</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#">Акции</a>
+                <a href="#">Новости</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@uspekh.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 15</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Успех. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Проверяем авторизацию при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                document.getElementById('authButtons').style.display = 'none';
+                document.getElementById('userMenu').style.display = 'flex';
+                const user = JSON.parse(currentUser);
+                document.getElementById('userName').textContent = user.name;
+                document.getElementById('userAvatar').textContent = user.initials;
+            } else {
+                document.getElementById('authButtons').style.display = 'flex';
+                document.getElementById('userMenu').style.display = 'none';
+            }
+        });
+
+        // Навигация по якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Обновление активной ссылки при скролле
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
