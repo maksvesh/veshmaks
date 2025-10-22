@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Успех</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+ <!-- Шапка сайта -->
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Успех</span>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#categories">Категории</a></li>
+                <li><a href="index.html#products">Товары</a></li>
+                <li><a href="index.html#about">О нас</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="search-cart">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            
+            <div class="auth-buttons" id="authButtons">
+                <a href="login.html" class="auth-btn">Вход</a>
+                <a href="register.html" class="auth-btn primary">Регистрация</a>
+            </div>
+            
+            <div class="user-menu" id="userMenu">
+                <a href="profile.html" class="user-avatar" id="userAvatar">ИИ</a>
+                <span id="userName">Иван Иванов</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Личный кабинет -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar" id="profileAvatar">ИИ</div>
+                <div class="profile-info">
+                    <h1 id="profileName">Иван Иванов</h1>
+                    <p id="profileEmail">ivan@example.com</p>
+                    <p>Клиент с января 2024</p>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Всего заказов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12,540 ₽</div>
+                    <div class="stat-label">Общая сумма</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Постоянный клиент</div>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <button class="tab-btn active" onclick="openTab('orders')">Мои заказы</button>
+                <button class="tab-btn" onclick="openTab('profile-info')">Личные данные</button>
+                <button class="tab-btn" onclick="openTab('addresses')">Адреса доставки</button>
+                <button class="tab-btn" onclick="logout()">Выйти</button>
+            </div>
+
+            <div id="orders" class="tab-content active">
+                <h3>История заказов</h3>
+                <div class="order-card">
+                    <div class="order-header">
+                        <strong>Заказ #12345</strong>
+                        <span class="order-status status-delivered">Доставлен</span>
+                    </div>
+                    <p>Дата: 15.01.2024</p>
+                    <p>Сумма: 2,845 ₽</p>
+                    <p>Товары: Яблоки, Молоко, Хлеб, Куриное филе</p>
+                </div>
+                
+                <!-- Кнопки навигации -->
+                <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="index.html#products" class="auth-btn primary">Продолжить покупки</a>
+                    <a href="index.html" class="auth-btn">На главную</a>
+                    <a href="login.html" class="auth-btn">Сменить аккаунт</a>
+                </div>
+            </div>
+
+            <div id="profile-info" class="tab-content">
+                <h3>Личные данные</h3>
+                <form class="auth-form" id="profileForm">
+                    <div class="form-group">
+                        <label>Имя и фамилия</label>
+                        <input type="text" id="profileNameInput" value="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="profileEmailInput" value="ivan@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" id="profilePhoneInput" value="+7 (999) 123-45-67">
+                    </div>
+                    <button type="submit" class="auth-btn-submit">Сохранить изменения</button>
+                </form>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="index.html" class="auth-btn">На главную</a>
+                    <a href="register.html" class="auth-btn">Создать новый аккаунт</a>
+                </div>
+            </div>
+
+            <div id="addresses" class="tab-content">
+                <h3>Адреса доставки</h3>
+                <div class="order-card">
+                    <h4>Основной адрес</h4>
+                    <p>г. Вешкайма, ул.Труда, д. 15, кв. 45</p>
+                    <p>+7 (999) 123-45-67</p>
+                </div>
+                <button class="auth-btn-submit" style="margin-top: 1rem;">Добавить новый адрес</button>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="index.html#products" class="auth-btn primary">Сделать заказ</a>
+                    <a href="index.html" class="auth-btn">Вернуться к покупкам</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>Успех - это современный онлайн-супер с быстрой доставкой свежих продуктов прямо к вашей
+                    двери.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Категории</h3>
+                <a href="#categories">Овощи и фрукты</a>
+                <a href="#categories">Молочные продукты</a>
+                <a href="#categories">Мясо и птица</a>
+                <a href="#categories">Бакалея</a>
+                <a href="#categories">Напитки</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Полезные ссылки</h3>
+                <a href="#">Главная</a>
+                <a href="#">Категории</a>
+                <a href="#">Товары</a>
+                <a href="#">О нас</a>
+                <a href="#">Контакт</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@uspekh.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i>Вешкайма, ул. 50 лет СССР, 5</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Успех. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Переключение между вкладками
+        function openTab(tabId) {
+            // Скрыть все вкладки
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Убрать активный класс со всех кнопок
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Показать выбранную вкладку
+            document.getElementById(tabId).classList.add('active');
+            
+            // Сделать кнопку активной
+            event.target.classList.add('active');
+        }
+
+        // Выход из системы
+        function logout() {
+            localStorage.removeItem('currentUser');
+            alert('Вы вышли из системы');
+            window.location.href = 'login.html';
+        }
+
+        // Обновление информации пользователя
+        function updateUserInfo() {
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user) {
+                document.getElementById('userName').textContent = user.name;
+                document.getElementById('userAvatar').textContent = user.initials;
+                document.getElementById('profileName').textContent = user.name;
+                document.getElementById('profileEmail').textContent = user.email;
+                document.getElementById('profileAvatar').textContent = user.initials;
+                document.getElementById('profileNameInput').value = user.name;
+                document.getElementById('profileEmailInput').value = user.email;
+                document.getElementById('profilePhoneInput').value = user.phone || '+7 (999) 123-45-67';
+            }
+        }
+
+        // Проверяем авторизацию при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (!currentUser) {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            updateUserInfo();
+            document.getElementById('authButtons').style.display = 'none';
+            document.getElementById('userMenu').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>

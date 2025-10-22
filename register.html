@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Успех</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <!-- Шапка сайта -->
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Успех</span>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#categories">Категории</a></li>
+                <li><a href="index.html#products">Товары</a></li>
+                <li><a href="index.html#about">О нас</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="search-cart">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-btn">Вход</a>
+                <a href="index.html" class="auth-btn">На главную</a>
+            </div>
+            
+            <div class="user-menu" id="userMenu">
+                <a href="profile.html" class="user-avatar" id="userAvatar">ИИ</a>
+                <span id="userName">Иван Иванов</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Страница регистрации -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <h2 class="auth-title">Регистрация</h2>
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Имя и фамилия</label>
+                    <input type="text" id="regName" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" placeholder="Введите ваш email" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Телефон</label>
+                    <input type="tel" id="regPhone" placeholder="+7 (999) 999-99-99" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Пароль</label>
+                    <input type="password" id="regPassword" placeholder="Придумайте пароль" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Подтвердите пароль</label>
+                    <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required>
+                </div>
+                <button type="submit" class="auth-btn-submit">Зарегистрироваться</button>
+            </form>
+            <div class="auth-switch">
+                Уже есть аккаунт? <a href="login.html">Войти</a>
+            </div>
+            <div class="auth-switch">
+                <a href="index.html">← Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок с преимуществами -->
+    <section style="padding: 3rem 5%; background: white; text-align: center;">
+        <h2 style="margin-bottom: 2rem;">Почему выбирают Успех?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            <div class="feature">
+                <i class="fas fa-shipping-fast" style="font-size: 3rem; color: var(--primary);"></i>
+                <h4>Быстрая доставка</h4>
+                <p>Доставляем за 2 часа в удобное для вас время</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-award" style="font-size: 3rem; color: var(--primary);"></i>
+                <h4>Гарантия качества</h4>
+                <p>Все товары проходят строгий контроль</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-leaf" style="font-size: 3rem; color: var(--primary);"></i>
+                <h4>Эко-продукты</h4>
+                <p>Широкий выбор органических продуктов</p>
+            </div>
+        </div>
+        <div style="margin-top: 2rem;">
+            <a href="index.html#about" class="auth-btn primary">Узнать больше о нас</a>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>Успех - это современный онлайн-супер с быстрой доставкой свежих продуктов прямо к вашей
+                    двери.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Категории</h3>
+                <a href="#categories">Овощи и фрукты</a>
+                <a href="#categories">Молочные продукты</a>
+                <a href="#categories">Мясо и птица</a>
+                <a href="#categories">Бакалея</a>
+                <a href="#categories">Напитки</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Полезные ссылки</h3>
+                <a href="#">Главная</a>
+                <a href="#">Категории</a>
+                <a href="#">Товары</a>
+                <a href="#">О нас</a>
+                <a href="#">Контакт</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@uspekh.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i>Вешкайма, ул. 50 лет СССР, 5</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Успех. Все права защищены.</p>
+        </div>
+    </footer>
+    <script>
+        // Обработка формы регистрации
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Пароли не совпадают!');
+                return;
+            }
+            
+            if (name && email && phone && password) {
+                const initials = name.split(' ').map(n => n[0]).join('').toUpperCase();
+                const user = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    initials: initials
+                };
+                
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                alert('Регистрация прошла успешно! Добро пожаловать!');
+                window.location.href = 'profile.html';
+            } else {
+                alert('Пожалуйста, заполните все поля');
+            }
+        });
+
+        // Проверяем авторизацию при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                document.getElementById('authButtons').style.display = 'none';
+                document.getElementById('userMenu').style.display = 'flex';
+                const user = JSON.parse(currentUser);
+                document.getElementById('userName').textContent = user.name;
+                document.getElementById('userAvatar').textContent = user.initials;
+            }
+        });
+    </script>
+</body>
+</html>

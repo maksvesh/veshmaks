@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Успех</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-basket"></i>
+                <span>Успех</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#categories">Категории</a></li>
+                    <li><a href="index.html#products">Товары</a></li>
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-cart">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+                
+                <div class="auth-buttons">
+                    <a href="register.html" class="auth-btn">Регистрация</a>
+                    <a href="index.html" class="auth-btn">На главную</a>
+                </div>
+                
+                <div class="user-menu" id="userMenu">
+                    <a href="profile.html" class="user-avatar" id="userAvatar">ИИ</a>
+                    <span id="userName">Иван Иванов</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Страница входа -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <h2 class="auth-title">Вход в аккаунт</h2>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Введите ваш email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit" class="auth-btn-submit">Войти</button>
+            </form>
+            <div class="auth-switch">
+                Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+            </div>
+            <div class="auth-switch">
+                <a href="index.html">← Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>Успех - это современный онлайн-супер с быстрой доставкой свежих продуктов прямо к вашей
+                    двери.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Категории</h3>
+                <a href="#categories">Овощи и фрукты</a>
+                <a href="#categories">Молочные продукты</a>
+                <a href="#categories">Мясо и птица</a>
+                <a href="#categories">Бакалея</a>
+                <a href="#categories">Напитки</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Полезные ссылки</h3>
+                <a href="#">Главная</a>
+                <a href="#">Категории</a>
+                <a href="#">Товары</a>
+                <a href="#">О нас</a>
+                <a href="#">Контакт</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@uspekh.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i>Вешкайма, ул. 50 лет СССР, 5</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Успех. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Обработка формы входа
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            if (email && password) {
+                // Создаем объект пользователя
+                const user = {
+                    name: 'Иван Иванов',
+                    email: email,
+                    initials: 'ИИ'
+                };
+                
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                alert('Вы успешно вошли в систему!');
+                window.location.href = 'profile.html';
+            } else {
+                alert('Пожалуйста, заполните все поля');
+            }
+        });
+
+        // Проверяем авторизацию при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                document.getElementById('authButtons').style.display = 'none';
+                document.getElementById('userMenu').style.display = 'flex';
+                const user = JSON.parse(currentUser);
+                document.getElementById('userName').textContent = user.name;
+                document.getElementById('userAvatar').textContent = user.initials;
+            }
+        });
+    </script>
+</body>
+</html>
